@@ -1,0 +1,130 @@
+/* Container tổng thể */
+.bmi-container {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bmi-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Nút chọn hệ đo lường */
+.bmi-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.bmi-toggle button {
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.bmi-toggle button.metric {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.bmi-toggle button.us {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.bmi-toggle button.active {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.bmi-toggle button:not(.active) {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.bmi-toggle button:hover:not(.active) {
+  background-color: #e5e7eb;
+}
+
+/* Input */
+.bmi-input label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.bmi-input input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.bmi-input input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Card hiển thị kết quả */
+.bmi-result {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.bmi-result h3 {
+  font-size: 1.2rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.bmi-result .bmi-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 1rem 0;
+}
+
+.bmi-result .bmi-category {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.bmi-category.thieu-can {
+  color: #f59e0b;
+}
+
+.bmi-category.binh-thuong {
+  color: #10b981;
+}
+
+.bmi-category.thua-can {
+  color: #f97316;
+}
+
+.bmi-category.beo-phi {
+  color: #ef4444;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
